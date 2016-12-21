@@ -1,0 +1,74 @@
+2016-12-21 16:15:38 INFO  Main:29 - 
+1. -- Check the current temperature..
+2. -- Generate the pdf file with the entered cities and their current temperatures..
+3. -- Send e-mail..
+0. -- Exit.. 
+Select one of the available options:
+2016-12-21 16:15:44 INFO  CityAndTempFunctions:24 - Loading data from API....
+
+2016-12-21 16:15:54 INFO  CityAndTempFunctions:53 - All cities for which you can check current temperature:
+2016-12-21 16:15:54 INFO  CityAndTempFunctions:58 - [Teslic, Banja Luka, Bijeljina, Uzice, Novi Sad, Moscow, Kiev, London, Saint Petersburg, Malino, Montevideo, Vancouver, Madrid, Barcelona, Verona, Zaragoza]
+2016-12-21 16:15:54 INFO  CityAndTempFunctions:63 - For how many cities you want to view the current temperature(Enter the number):
+2016-12-21 16:16:13 INFO  CityAndTempFunctions:69 - Chosen number of input: 3
+2016-12-21 16:16:13 INFO  CityAndTempFunctions:77 - Enter the cities from the list:
+
+2016-12-21 16:16:23 INFO  CityAndTempFunctions:95 - 1.teslic
+
+2016-12-21 16:16:31 INFO  CityAndTempFunctions:95 - 2.novi sad
+
+2016-12-21 16:16:39 INFO  CityAndTempFunctions:95 - 3.london
+
+2016-12-21 16:16:39 INFO  CityAndTempFunctions:126 - Overview of entered cities and temperatures:
+
+2016-12-21 16:16:39 INFO  CityAndTempFunctions:128 - Teslic: Current temperature:: -4.32 Minimal temperature: -4.315 Maximal temperature: -4.315 Pressure: 967.59
+2016-12-21 16:16:39 INFO  CityAndTempFunctions:128 - Novi Sad: Current temperature:: -1 Minimal temperature: -1 Maximal temperature: -1 Pressure: 1036
+2016-12-21 16:16:39 INFO  CityAndTempFunctions:128 - London: Current temperature:: 10.16 Minimal temperature: 9 Maximal temperature: 11 Pressure: 1017
+2016-12-21 16:16:39 INFO  Main:29 - 
+1. -- Check the current temperature..
+2. -- Generate the pdf file with the entered cities and their current temperatures..
+3. -- Send e-mail..
+0. -- Exit.. 
+Select one of the available options:
+2016-12-21 16:16:50 INFO  Pdf:109 - Enter the file name:
+2016-12-21 16:16:58 WARN  Pdf:112 - Filename cannot be empty!
+2016-12-21 16:16:58 INFO  Pdf:109 - Enter the file name:
+2016-12-21 16:17:24 INFO  Main:109 - Successfully created file..
+2016-12-21 16:17:24 INFO  Main:29 - 
+1. -- Check the current temperature..
+2. -- Generate the pdf file with the entered cities and their current temperatures..
+3. -- Send e-mail..
+0. -- Exit.. 
+Select one of the available options:
+2016-12-21 16:17:37 INFO  EmailFunctions:33 - Send to(for multiple entry separate with space):
+2016-12-21 16:18:06 INFO  EmailFunctions:39 - 1. darko_ki@hotmail.com
+
+2016-12-21 16:18:06 INFO  EmailFunctions:39 - 2. stana.kitic@gmail.com
+
+2016-12-21 16:18:06 INFO  EmailFunctions:47 - Please enter a subject:
+2016-12-21 16:18:18 INFO  EmailFunctions:49 - Title
+
+2016-12-21 16:18:18 INFO  EmailFunctions:55 - Please enter the message:
+2016-12-21 16:18:34 INFO  EmailFunctions:57 - Text of the mesege!!!
+
+2016-12-21 16:18:34 INFO  EmailFunctions:63 - Enter generated files..(Press 0 to send e-mail):
+2016-12-21 16:18:38 INFO  EmailFunctions:69 - 1. Curr Temperatue
+2016-12-21 16:18:40 INFO  EmailFunctions:69 - 2. 0
+2016-12-21 16:18:40 INFO  EmailFunctions:71 - Sending e-mail!!
+2016-12-21 16:18:42 INFO  Main:127 - Email successfully sent!
+2016-12-21 16:18:42 INFO  Main:29 - 
+1. -- Check the current temperature..
+2. -- Generate the pdf file with the entered cities and their current temperatures..
+3. -- Send e-mail..
+0. -- Exit.. 
+Select one of the available options:
+2016-12-21 17:51:04 INFO  Main:29 - 
+1. -- Check the current temperature..
+2. -- Generate the pdf file with the entered cities and their current temperatures..
+3. -- Send e-mail..
+0. -- Exit.. 
+Select one of the available options:
+2016-12-21 17:51:08 INFO  CityAndTempFunctions:24 - Loading data from API....
+
+2016-12-21 17:51:12 INFO  CityAndTempFunctions:53 - All cities for which you can check current temperature:
+2016-12-21 17:51:12 INFO  CityAndTempFunctions:58 - [Teslic, Banja Luka, Bijeljina, Uzice, Novi Sad, Moscow, Kiev, London, Saint Petersburg, Malino, Montevideo, Vancouver, Madrid, Barcelona, Verona, Zaragoza]
+2016-12-21 17:51:12 INFO  CityAndTempFunctions:63 - For how many cities you want to view the current temperature(Enter the number):

@@ -19,14 +19,13 @@ import javax.mail.internet.MimeMultipart;
 
 import org.apache.log4j.Logger;
 
+import json.constants.Constant;
 import json.pdf.Pdf;
 
 public class EmailFunctions {
 
 	private static Logger logger = Logger.getLogger(EmailFunctions.class);
 	private static Scanner scanner = new Scanner(System.in);
-	private static final String FILE_PATH = "src/main/resources/pdf/";
-	private static final String EXTENSION = ".pdf";
 
 	public static ArrayList<String> toAddress() {
 
@@ -59,7 +58,7 @@ public class EmailFunctions {
 	}
 
 	public static ArrayList<String> attachFiles() {
-	
+
 		logger.info("Enter generated files..(Press 0 to send e-mail):");
 		ArrayList<String> att = new ArrayList<String>();
 		boolean check = true;
@@ -71,7 +70,7 @@ public class EmailFunctions {
 				logger.info("Sending e-mail!!");
 				break;
 			}
-			att.add(FILE_PATH + fileName + EXTENSION);
+			att.add(Constant.FILE_PATH + fileName + Constant.EXTENSION);
 			count++;
 		}
 		return att;
@@ -82,7 +81,7 @@ public class EmailFunctions {
 
 		Properties properties = new Properties();
 
-		File file = new File("src/main/resources/properties/email.properties");
+		File file = new File(Constant.EMAIL_PROP_PATH);
 		Pdf.inputStream(properties, file);
 
 		final String host = properties.getProperty("host");

@@ -19,6 +19,7 @@ import com.itextpdf.text.FontFactory;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 
+import json.constants.Constant;
 import json.current.temp.CityAndTemp;
 
 public class Pdf {
@@ -39,24 +40,12 @@ public class Pdf {
 		}
 	}
 
-	public static Properties citiesToUrl() {
-
-		Properties properties = new Properties();
-		File file = new File("src/main/resources/properties/cities.properties");
-		inputStream(properties, file);
-
-		properties.getProperty("cities-id");
-
-		return properties;
-
-	}
-
 	public static Paragraph addValuesToPdf(ArrayList<String> city, ArrayList<String> cuTemp, ArrayList<String> minTe,
 			ArrayList<String> maxTe, ArrayList<String> press) throws Exception {
 
 		Paragraph paragraph = new Paragraph();
 		Properties properties = new Properties();
-		File file = new File("src/main/resources/properties/pdfconfig.properties");
+		File file = new File(Constant.PDF_PROP_PATH);
 		inputStream(properties, file);
 
 		String fontName = properties.getProperty("font-text");
@@ -81,7 +70,7 @@ public class Pdf {
 
 		Paragraph paragraph = new Paragraph();
 		Properties properties = new Properties();
-		File file = new File("src/main/resources/properties/pdfconfig.properties");
+		File file = new File(Constant.PDF_PROP_PATH);
 		inputStream(properties, file);
 
 		String titleText = properties.getProperty("title-text");
@@ -116,7 +105,7 @@ public class Pdf {
 				logger.warn("A filename cannot contain any of the following characters \\ / : * ? \" < > |");
 				continue;
 			} else {
-				inName = "src/main/resources/pdf/" + inName + ".pdf";
+				inName = Constant.FILE_PATH + inName + Constant.EXTENSION;
 				check = false;
 			}
 		}

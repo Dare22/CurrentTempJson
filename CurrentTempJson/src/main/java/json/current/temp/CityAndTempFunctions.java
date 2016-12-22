@@ -1,18 +1,23 @@
 package json.current.temp;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.Properties;
 import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import json.constants.Constant;
+import json.pdf.Pdf;
 
 public class CityAndTempFunctions {
 
@@ -38,6 +43,18 @@ public class CityAndTempFunctions {
 			bufferedReader.close();
 		}
 		return sb.toString();
+	}
+
+	public static Properties citiesToUrl() {
+
+		Properties properties = new Properties();
+		File file = new File(Constant.CITIES_PROP_PATH);
+		Pdf.inputStream(properties, file);
+
+		properties.getProperty("cities-id");
+
+		return properties;
+
 	}
 
 	public static JSONArray getDataFromApi(JSONArray jsonArray) throws JSONException {
@@ -125,8 +142,8 @@ public class CityAndTempFunctions {
 
 		logger.info("Overview of entered cities and temperatures:\n");
 		for (int i = 0; i < cities.size(); i++) {
-			logger.info(cities.get(i) + ": Current temperature:: " + cuTemp.get(i) + " Minimal temperature: " + minTe.get(i)
-			+ " Maximal temperature: " + maxTe.get(i) + " Pressure: " + press.get(i));
+			logger.info(cities.get(i) + ": Current temperature:: " + cuTemp.get(i) + " Minimal temperature: "
+					+ minTe.get(i) + " Maximal temperature: " + maxTe.get(i) + " Pressure: " + press.get(i));
 		}
 
 	}

@@ -13,6 +13,7 @@ import org.json.JSONArray;
 
 import com.itextpdf.text.ExceptionConverter;
 
+import json.constants.Constant;
 import json.current.temp.CityAndTemp;
 import json.current.temp.CityAndTempFunctions;
 import json.email.EmailFunctions;
@@ -28,9 +29,7 @@ public class Main {
 		System.out.println();
 		logger.info("\n1. -- Check the current temperature..\n"
 				+ "2. -- Generate the pdf file with the entered cities and their current temperatures..\n"
-				+ "3. -- Send e-mail..\n" 
-				+ "0. -- Exit.. \n" 
-				+ "Select one of the available options:");
+				+ "3. -- Send e-mail..\n" + "0. -- Exit.. \n" + "Select one of the available options:");
 
 		boolean continueInput = true;
 		int numForMenu = 0;
@@ -70,7 +69,7 @@ public class Main {
 
 				try {
 
-					JSONArray jsonArray = new JSONArray(CityAndTempFunctions.callURL(CityAndTemp.getApiUrl()));
+					JSONArray jsonArray = new JSONArray(CityAndTempFunctions.callURL(Constant.API_URL));
 
 					CityAndTempFunctions.showCities(CityAndTempFunctions.getDataFromApi(jsonArray));
 					CityAndTempFunctions.addValuesFromApi(CityAndTempFunctions.getDataFromApi(jsonArray),

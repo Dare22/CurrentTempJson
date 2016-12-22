@@ -3,12 +3,8 @@ package json.current.temp;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 
-import json.pdf.Pdf;
-
 public class CityAndTemp {
 
-	private static final String API_URL = "http://api.openweathermap.org/data/2.5/group?id=" + Pdf.citiesToUrl()
-			+ "&units=metric&appid=953cba0c9efb27866d89bb56d67162a1";
 	private static ArrayList<String> cities = new ArrayList<String>();
 	private static LinkedHashSet<String> remDuplCities = new LinkedHashSet<String>();
 	private static ArrayList<String> currentTemp = new ArrayList<String>();
@@ -62,10 +58,6 @@ public class CityAndTemp {
 
 	public static void setPressure(ArrayList<String> pressure) {
 		CityAndTemp.pressure = pressure;
-	}
-
-	public static String getApiUrl() {
-		return API_URL;
 	}
 
 }
